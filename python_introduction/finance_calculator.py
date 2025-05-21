@@ -1,6 +1,6 @@
-monthly_income = float(input("Enter your monthly income: "))
-monthly_expanses = float(input("Enter your total monthly expenses: "))
-float monthly_savings = monthly_income - monthly_expanses
+monthly_income = (input("Enter your monthly income: "))
+monthly_expanses = (input("Enter your total monthly expenses: "))
+float monthly_savings = float(monthly_income) - float(monthly_expanses)
 interest = 0.05
 savings_after = monthly_savings * 12 * 0.05
 print("Your monthly savings are ",monthly_savings)
