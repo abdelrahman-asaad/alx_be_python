@@ -19,16 +19,16 @@ while time_bound not in ["yes", "no"]:
 match priority:
     case "high":
         if time_bound == "yes":
-            print(f"\nReminder: '{task}' is a high priority task that requires immediate attention today!")
+            print(f"Reminder: '{task}' is a high priority task that requires immediate attention today!")
         else:
-            print(f"\nReminder: '{task}' is a high priority task. Make sure to schedule it as soon as possible.")
+            print(f"Reminder: '{task}' is a high priority task. Make sure to schedule it as soon as possible.")
     case "medium":
         if time_bound == "yes":
-            print(f"\nReminder: '{task}' is a medium priority task that should be completed today.")
+            print(f"Reminder: '{task}' is a medium priority task that should be completed today.")
         else:
-            print(f"\nReminder: '{task}' is a medium priority task. Plan to do it this week.")
+            print(f"Reminder: '{task}' is a medium priority task. Plan to do it this week.")
     case "low":
         if time_bound == "yes":
-            print(f"\nReminder: '{task}' is a low priority task, but it is time-sensitive. Try to complete it today.")
+            print(f"Reminder: '{task}' is a low priority task, but it is time-sensitive. Try to complete it today.")
         else:
-            print(f"\nNote: '{task}' is a low priority task. Consider completing it when you have free time.")
+            print(f"Note: '{task}' is a low priority task. Consider completing it when you have free time.")
