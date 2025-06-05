@@ -1,10 +1,8 @@
 shopping_list = []
 def display_menu():
-    
     add = "add"
     remove = "remove"
     view_item = "view"
-
     choice = "Hi"
     while choice != "exit":
         print(shopping_list)
