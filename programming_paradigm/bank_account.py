@@ -3,26 +3,22 @@ class BankAccount:
         self.account_balance = account_balance
     def deposit(self, amount):
         self.account_balance += amount
-        print(f"Deposited: ${amount:.1f}")
+        print(f"Deposited: ${amount:.2f}")
     def withdraw(self, amount):
         if self.account_balance < amount:
             print("Insufficient funds.")
         else: 
             self.account_balance -= amount   
-            print(f"Withdrew: ${amount:.1f}")
+            print(f"Withdrew: ${amount:.2f}")
     def display_balance(self):
-        print(f"Current Balance: ${self.account_balance:.1f}")
+        print(f"Current Balance: ${self.account_balance:.2f}")
 
 #creating object
-operation = BankAccount(100)
-operation.display_balance()
-operation.deposit(67)        
-operation.display_balance()
-operation.withdraw(50)
-operation.display_balance()
-operation.withdraw(118)
-operation.display_balance()
-
+acc = BankAccount(100)
+acc.deposit(67.0)              # ➜ Deposited: $67.0
+acc.withdraw(50.0)             # ➜ Withdrew: $50.0
+acc.withdraw(200.0)            # ➜ Insufficient funds.
+acc.display_balance() 
 
 
         
