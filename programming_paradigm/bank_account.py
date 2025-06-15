@@ -20,6 +20,9 @@ operation.deposit(50)
 operation.display_balance()
 operation.withdraw(20)
 operation.display_balance()
+operation.withdraw(140)
+operation.display_balance()
+
 
 
 
