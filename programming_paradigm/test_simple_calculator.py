@@ -8,13 +8,13 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertEqual(self.calc.add(2, 3), 5)
     def test_subtarction(self):
         self.calc = SimpleCalculator()             #creating object from SimpleCalculator class
-        self.assertEqual(self.calc.multiply(6, 3), 3)
-    def test_multiblication(self):
+        self.assertEqual(self.calc.subtract(6, 3), 3)
+    def test_multiply(self):
         self.calc = SimpleCalculator()             #creating object from SimpleCalculator class
-        self.assertEqual(self.calc.add(2, 3), 6)
-    def test_division (self):
+        self.assertEqual(self.calc.multiply(2, 3), 6)
+    def test_divide(self):
         self.calc = SimpleCalculator()             #creating object from SimpleCalculator class
-        self.assertEqual(self.calc.add(6, 3), 2)
+        self.assertEqual(self.calc.divide(6, 3), 2)
         
 
 
