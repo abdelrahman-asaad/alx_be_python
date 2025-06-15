@@ -1,8 +1,8 @@
 def safe_divide(numerator, denominator):
     try :
         print(float(numerator)/float(denominator))
-    except ZeroDivisionError as e:
-        print(e)
+    except ZeroDivisionError :
+        print("Error: Cannot divide by zero.")
     except ValueError :
         print(f"please Enter Number")
 
