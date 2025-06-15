@@ -1,49 +1,41 @@
-book_shelf = { "1984": "George Orwell", "Brave New World": "Aldous Huxley"}
-
 class Book:
     def __init__(self, title, author):
         self.title = title
-        self. author = author
+        self.author = author
         self._is_checked_out = False
 
-    def check_out(self, title):
-        title = title.strip()
-        if title in book_shelf:
-            return f"{title} is available"
-        else:
-            return self._is_checked_out
+    def check_out(self):
+        self._is_checked_out = True
 
-class Library(Book):
+    def return_book(self):
+        self._is_checked_out = False
+
+    def is_available(self):
+        return not self._is_checked_out
+
+
+class Library:
     def __init__(self):
-        super().__init__()
-        self._books = book_shelf
+        self._books = []
 
-    def add_book(self, title, author):
-        book_shelf[title] = author
-        return f"Added {title} by {author}"
-    
+    def add_book(self, book):
+        self._books.append(book)
+
     def check_out_book(self, title):
-        for key in book_shelf:
-            if key == title:
-                return f"Yes, '{title}' exists"
+        for book in self._books:
+            if book.title == title and book.is_available():
+                book.check_out()
+                return True
         return False
-    
+
     def return_book(self, title):
-        if title in book_shelf:
-            del book_shelf[title]           #delete key and value
-            return f"'{title}' is returned and removed"
-        else:
-            return f"'{title}' not found"
+        for book in self._books:
+            if book.title == title and not book.is_available():
+                book.return_book()  #false
+                return True
+        return False
 
     def list_available_books(self):
-        return f"Available Books: {list(book_shelf)}"
-
-# تجربة
-book_1 = Library()
-print(book_1.add_book("Blue", "Mourad"))
-print(book_shelf)
-print(book_1.check_out_book("Blue"))
-print(book_1.list_available_books())
-print(book_1.return_book("Blue"))
-print(book_1.list_available_books())
-print(book_1.check_out_book("Blue"))
+        for book in self._books:
+            if book.is_available():
+                print(f"{book.title} by {book.author}")
