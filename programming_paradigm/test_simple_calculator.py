@@ -4,7 +4,7 @@ from simple_calculator import SimpleCalculator
 class TestSimpleCalculator(unittest.TestCase):
     
     def test_addition(self):
-        self.calc = SimpleCalculator()             #creating object from SimpleCalculator class
+        self.calc = SimpleCalculator()             #self.calc is a property that has value of object from SimpleCalculator class
         self.assertEqual(self.calc.add(2, 3), 5)
     def test_subtraction(self):
         self.calc = SimpleCalculator()             #creating object from SimpleCalculator class
@@ -12,7 +12,7 @@ class TestSimpleCalculator(unittest.TestCase):
     def test_multiplication(self):
         self.calc = SimpleCalculator()             #creating object from SimpleCalculator class
         self.assertEqual(self.calc.multiply(2, 3), 6)
-    def test_dividision(self):
+    def test_division(self):
         self.calc = SimpleCalculator()             #creating object from SimpleCalculator class
         self.assertEqual(self.calc.divide(6, 3), 2)
         
