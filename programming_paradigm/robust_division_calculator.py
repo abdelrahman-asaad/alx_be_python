@@ -1,6 +1,6 @@
-def safe_divide(numerator:float, denominator:float):
+def safe_divide(numerator, denominator):
     try :
-        print(numerator/denominator)
+        print(float(numerator)/float(denominator))
     except ZeroDivisionError as e:
         print(e)
     except ValueError :
