@@ -2,8 +2,11 @@ import unittest
 from simple_calculator import SimpleCalculator
 
 class TestSimpleCalculator(unittest.TestCase):
+    
     def test_add(self,adding):
-        adding = SimpleCalculator.add(5,7)
+        self.calc = SimpleCalculator()
+        self.calc = SimpleCalculator.add(5,7)
+        adding = self.calc
         self.assertEqual(adding, 12)
     def test_subtarction(self,subtraction):
         subtraction = SimpleCalculator.subtract(12, 2)
@@ -14,5 +17,24 @@ class TestSimpleCalculator(unittest.TestCase):
     def test_division (self, division):
         division = SimpleCalculator.divide(10, 2)    
         self.assertEqual(division, 5)
+        
+
+
+#import unittest
+#from simple_calculator import SimpleCalculator
+
+#class TestSimpleCalculator(unittest.TestCase):
+#    def test_add(self,adding):
+#        adding = SimpleCalculator.add(5,7)
+#        self.assertEqual(adding, 12)
+#    def test_subtarction(self,subtraction):
+#        subtraction = SimpleCalculator.subtract(12, 2)
+#        self.assertEqual(subtraction, 10)
+#    def test_multiblication(self, multiblacation):
+#        multiblacation = SimpleCalculator.multiply(5,7)
+#        self.assertEqual(multiblacation, 35)
+#    def test_division (self, division):
+#        division = SimpleCalculator.divide(10, 2)    
+#        self.assertEqual(division, 5)
         
         
