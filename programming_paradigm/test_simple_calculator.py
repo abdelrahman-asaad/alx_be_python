@@ -3,11 +3,9 @@ from simple_calculator import SimpleCalculator
 
 class TestSimpleCalculator(unittest.TestCase):
     
-    def test_add(self,adding):
-        self.calc = SimpleCalculator()
-        self.calc = SimpleCalculator.add(5,7)
-        adding = self.calc
-        self.assertEqual(adding, 12)
+    def test_add(self):
+        self.calc = SimpleCalculator()             #creating object from SimpleCalculator class
+        self.assertEqual(self.calc.add(2, 3), 5)
     def test_subtarction(self,subtraction):
         subtraction = SimpleCalculator.subtract(12, 2)
         self.assertEqual(subtraction, 10)
