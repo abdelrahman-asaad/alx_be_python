@@ -1,7 +1,9 @@
 book_shelf = { "1984": "George Orwell", "Brave New World": "Aldous Huxley"}
 
 class Book:
-    def __init__(self):
+    def __init__(self, title, author):
+        self.title = title
+        self. author = author
         self._is_checked_out = False
 
     def check_out(self, title):
@@ -28,7 +30,7 @@ class Library(Book):
     
     def return_book(self, title):
         if title in book_shelf:
-            del book_shelf[title]
+            del book_shelf[title]           #delete key and value
             return f"'{title}' is returned and removed"
         else:
             return f"'{title}' not found"
