@@ -9,10 +9,10 @@ class TestSimpleCalculator(unittest.TestCase):
     def test_subtraction(self):
         self.calc = SimpleCalculator()             #creating object from SimpleCalculator class
         self.assertEqual(self.calc.subtract(6, 3), 3)
-    def test_multiply(self):
+    def test_multiplication(self):
         self.calc = SimpleCalculator()             #creating object from SimpleCalculator class
         self.assertEqual(self.calc.multiply(2, 3), 6)
-    def test_divide(self):
+    def test_dividision(self):
         self.calc = SimpleCalculator()             #creating object from SimpleCalculator class
         self.assertEqual(self.calc.divide(6, 3), 2)
         
