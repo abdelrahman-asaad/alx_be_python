@@ -4,7 +4,7 @@ class Book:
         self.title = title
         self.author = author
 
-    def __repr__(self):  #to represent object instantiated of this class
+    def __str__(self):  #to return the string proven when object instantiated of this class
         return f"{__class__.__name__}: {self.title} by {self.author}"  
     
 
@@ -13,7 +13,7 @@ class EBook(Book):
         super().__init__(title, author)
         self.file_size = file_size
 
-    def __repr__(self):   #to represent object instantiated of this class
+    def __str__(self):    #to return the string proven when object instantiated of this class
         return f"{__class__.__name__}: {self.title} by {self.author}, File Size: {self.file_size}"   
 
 class PrintBook(Book):
@@ -21,7 +21,7 @@ class PrintBook(Book):
         super().__init__(title, author)
         self.page_count = page_count
 
-    def __repr__(self):    #to represent object instantiated of this class
+    def __str__(self):     #to return the string proven when object instantiated of this class
         return f"{__class__.__name__}: {self.title} by {self.author}, Page Count: {self.page_count}"   
 
 class Library:
