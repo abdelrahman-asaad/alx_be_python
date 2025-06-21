@@ -11,7 +11,7 @@ class Calculator:
     def multiply(cls, a, b):
         cls.calculation_type =  a * b  #class level attribute
         print(f"Calculation type: {cls.calculation_type}")
-        return cls.calculation_type  # or retutn a * b
+        return a * b          #or return cls.calculation_type
     
 #creating object
 # Using the static method
